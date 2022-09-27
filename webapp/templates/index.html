@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{%  block content %}
+{#    <button value="plus" ><a href="{% url 'api_v1:ChangeRating' 1 %}" >plus</a></button>#}
+{##}
+{#    <a href="{% url 'api_v1:ChangeRating' 1 %}" methods="POST" >plus</a>#}
+{#    <a href="{% url 'api_v1:ChangeRating' 1 %}" methods="POST">minus</a>#}
+    {% if perms.api_v1.add_quote %}
+        ЕСТЬ ПРАВО!!!!
+
+    {% endif %}
+{%  endblock %}
+</body>
+</html>
